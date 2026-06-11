@@ -21,8 +21,8 @@ This tool replaces the hunch with measurement. But the interesting part is HOW
 it got designed, because it is the real lesson:
 
 I had a rough scoring idea and thought it was nearly done. Then I handed the
-whole design to a *different* AI model, from a different lab, and asked one
-question: **what is wrong with this?** Sixty seconds later it had:
+whole design to a *different, more capable* AI model, brought in only to review,
+and asked one question: **what is wrong with this?** Sixty seconds later it had:
 
 1. **Fixed the ranking metric.** My version ranked sources by hit-rate (what
    fraction of a source's items you use). It pointed out hit-rate is the wrong
@@ -39,9 +39,9 @@ question: **what is wrong with this?** Sixty seconds later it had:
    misleading 50 percent), a usefulness floor, cost-efficiency tie-breaking, and
    a permanent exploration budget so benched sources get re-tested.
 
-The design you are holding is its design, not mine. That practice — taking your
+The design you are holding is its design, not mine. That practice, taking your
 best output and handing it to a *different* model whose whole job is to start
-from your answer and improve it — is called **cognitive stacking**, and it is
+from your answer and improve it, is called **cognitive stacking**, and it is
 the cheapest high-leverage habit in AI work right now. A task-completion model
 spends 100 percent of its attention on the task. A second model spends 100
 percent of its attention on making the first one's work better. Same cost,
