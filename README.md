@@ -1,4 +1,4 @@
-# Source Signal — learn which of your discovery sources actually earn their place
+# Source Signal: learn which of your discovery sources actually earn their place
 
 A tiny, dependency-free tool for anyone running an AI research or discovery
 pipeline across multiple sources. Instead of guessing which sources are worth
@@ -62,7 +62,7 @@ python3 source_signal.py status
 ## Use it in four moves
 
 **1. After a discovery run, record what each source surfaced (the denominator).**
-A "run" is any id you choose — a date, a topic, a batch.
+A "run" is any id you choose: a date, a topic, a batch.
 
 ```bash
 python3 source_signal.py surfaced --run 2026-06-11 --source reddit --count 21
@@ -103,7 +103,7 @@ instagram          8     0     0    0.3333  0.0769  calibrating
 ```
 
 `uniq` (unique-used) is the number that drives the ranking. `instagram` surfaced
-8 and you used 0 — the data is starting to tell you something the hunch only
+8 and you used 0, and the data is starting to tell you something the hunch only
 suspected.
 
 **4. Get the recommended spend policy for next run.**
@@ -113,7 +113,7 @@ python3 source_signal.py policy
 ```
 
 It ranks your sources by absolute unique-used, tells you roughly how much
-attention each one earns, and — importantly — lists the benched sources it wants
+attention each one earns, and importantly lists the benched sources it wants
 you to re-test every so often, because this is a bandit, not a frozen list.
 
 ---
@@ -122,12 +122,12 @@ you to re-test every so often, because this is a bandit, not a frozen list.
 
 Open the file and edit `CONFIG` near the top:
 
-- `beta_alpha` / `beta_beta` — the shared smoothing prior. Identical for every
+- `beta_alpha` / `beta_beta`: the shared smoothing prior. Identical for every
   source so nothing is favored at the start.
-- `usefulness_floor_per_run` — how much a source must produce to "earn its place."
-- `exploration_fraction` — how often benched sources get re-tested (default 15%).
-- `attention_top` / `attention_floor` — the attention budget spread.
-- `calibration_decisions` — how many of your selections must involve a source
+- `usefulness_floor_per_run`: how much a source must produce to "earn its place."
+- `exploration_fraction`: how often benched sources get re-tested (default 15%).
+- `attention_top` / `attention_floor`: the attention budget spread.
+- `calibration_decisions`: how many of your selections must involve a source
   before it is judged rather than "still calibrating."
 
 ---

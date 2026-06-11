@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""source_signal.py — Learn which of your discovery sources actually earn their place.
+"""source_signal.py: Learn which of your discovery sources actually earn their place.
 
 A small, self-contained measurement layer for anyone running an AI research or
 discovery pipeline across multiple sources (X, Reddit, YouTube, newsletters,
